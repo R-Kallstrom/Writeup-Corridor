@@ -2,7 +2,8 @@
 A simple writeup for:  
 THM: Corridor  
 Difficulty: Easy  
-Techniques: IDOR, Hashes
+Techniques: IDOR, Hashes  
+Link: https://tryhackme.com/room/corridor/
 ____  
 Visiting the Attack_IP i find a interractive corridor, where clicking the doors lead to a room.  
 <img src="THM_Corridor.png" > 
@@ -56,9 +57,9 @@ echo -n "15" | md5sum
 9bf31c7ff062936a96d3c8bd1f8f2ff3  -
 ```
 15 also came back as `Not Found` so i will assume for now that everything over 15 will come back the same.
-But what about 0?
+So what about 0?
 ```
 echo -n "0" | md5sum
 cfcd208495d565ef66e7dff9f98764da  -
 ```
-Flag collected!
+A non-empty room with a Flag!
